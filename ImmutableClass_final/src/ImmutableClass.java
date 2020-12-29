@@ -1,3 +1,11 @@
+// Steps
+// 1. Declare the class as final so that it cannot be inherited.
+// 2. Data members of the class as private and final so that they cannot be accessed outside and also declared as constants
+// 3. A public parameterized constructor to create the object
+// 4. Getter Methods to access the value of the data members.
+// 5. No Setter methods
+// 6. If one of the data members is a mutable object then return the deep copy of the object instead of returning the existing object reference as it can change the state.
+
 
 class Engine{
 	int speed;

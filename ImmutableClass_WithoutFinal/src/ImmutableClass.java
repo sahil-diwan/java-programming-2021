@@ -1,3 +1,11 @@
+// Steps
+// 1. Make all the data members as private so that they cannot be accessed outside the class.
+// 2. Make the constructor as private.
+// 3. Provide with a static factory method to provide with the object
+// 4. Provide with the getter method
+// 5. Do not provide with the setter methods.
+// 6. If one of the data member is a mutable object then provide with the deep copy instead of the same object reference as it can change the state of the object. 
+
 
 class Engine{
 	int speed;
