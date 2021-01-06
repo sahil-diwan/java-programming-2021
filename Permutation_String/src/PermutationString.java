@@ -7,7 +7,9 @@ public class PermutationString {
 	
 	public static void getPermutation(String str){
 		char[] ch = str.toCharArray();
+		res = new ArrayList<String>();
 		permute(ch, 0, str.length()-1);
+		System.out.println(res.size());
 		Collections.sort(res);
 		for(String s:res)
 			System.out.println(s+" ");
