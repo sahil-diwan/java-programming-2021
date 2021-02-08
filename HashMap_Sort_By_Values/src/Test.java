@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Test {
 
@@ -18,9 +19,17 @@ public class Test {
             public int compare(Map.Entry<String, Integer> o1,  
                                Map.Entry<String, Integer> o2) 
             { 
-                return (o1.getValue()).compareTo(o2.getValue()); 
+                return (o2.getValue()).compareTo(o1.getValue()); 
             } 
-        }); 
+        }.thenComparing(new Comparator<Map.Entry<String, Integer> >(){
+
+			@Override
+			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+				// TODO Auto-generated method stub
+				  return (o1.getKey()).compareTo(o2.getKey()); 
+			}
+        	
+        })); 
           
         // put data from sorted list to hashmap  
         HashMap<String, Integer> temp = new LinkedHashMap<String, Integer>(); 
@@ -38,8 +47,8 @@ public class Test {
         hm.put("Data Structure", 85); 
         hm.put("Database", 91); 
         hm.put("Java", 95); 
-        hm.put("Operating System", 79); 
-        hm.put("Networking", 80); 
+        hm.put("Operating System", 80); 
+        hm.put("zetworking", 80); 
         Map<String, Integer> hm1 = sortByValue(hm);
         
         // print the sorted hashmap 
